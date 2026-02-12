@@ -44,53 +44,47 @@ const TransactionsTabEnhanced = ({ currency }) => {
     loadCategories();
     autoGenerateRecurringTransactions();
   }, []);
+useEffect(() => {
+  let filtered = [...transactions];
 
-  useEffect(() => {
-    applyFiltersAndSort();
-  }, [applyFiltersAndSort]);
-
-  const applyFiltersAndSort = useCallback(() => {
-    let filtered = [...transactions];
-
-    // Apply month filter
-    if (filterMonth !== 'all') {
-      filtered = filtered.filter(txn => {
-        const txnDate = new Date(txn.date);
-        return txnDate.getMonth() + 1 === parseInt(filterMonth);
-      });
-    }
-
-    // Apply year filter
-    if (filterYear !== 'all') {
-      filtered = filtered.filter(txn => {
-        const txnDate = new Date(txn.date);
-        return txnDate.getFullYear() === parseInt(filterYear);
-      });
-    }
-
-    // Apply type filter
-    if (filterType !== 'all') {
-      filtered = filtered.filter(txn => txn.type === filterType);
-    }
-
-    // Apply sorting
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'date-desc':
-          return new Date(b.date) - new Date(a.date);
-        case 'date-asc':
-          return new Date(a.date) - new Date(b.date);
-        case 'amount-desc':
-          return b.amount - a.amount;
-        case 'amount-asc':
-          return a.amount - b.amount;
-        default:
-          return new Date(b.date) - new Date(a.date);
-      }
+  if (filterMonth !== 'all') {
+    filtered = filtered.filter(txn => {
+      const txnDate = new Date(txn.date);
+      return txnDate.getMonth() + 1 === parseInt(filterMonth);
     });
+  }
 
-    setFilteredTransactions(filtered);
-  }, [transactions, filterMonth, filterYear, filterType, sortBy]);
+  if (filterYear !== 'all') {
+    filtered = filtered.filter(txn => {
+      const txnDate = new Date(txn.date);
+      return txnDate.getFullYear() === parseInt(filterYear);
+    });
+  }
+
+  if (filterType !== 'all') {
+    filtered = filtered.filter(txn => txn.type === filterType);
+  }
+
+  filtered.sort((a, b) => {
+    switch (sortBy) {
+      case 'date-desc':
+        return new Date(b.date) - new Date(a.date);
+      case 'date-asc':
+        return new Date(a.date) - new Date(b.date);
+      case 'amount-desc':
+        return b.amount - a.amount;
+      case 'amount-asc':
+        return a.amount - b.amount;
+      default:
+        return new Date(b.date) - new Date(a.date);
+    }
+  });
+
+  setFilteredTransactions(filtered);
+
+}, [transactions, filterMonth, filterYear, filterType, sortBy]);
+
+
 
   const autoGenerateRecurringTransactions = async () => {
     try {

@@ -1,0 +1,156 @@
+{
+  "identity": {
+    "name": "E1: The Anti-AI Designer",
+    "mission": "Create a 'Financial Zen' budgeting app that feels organic, trustworthy, and distinct from generic SaaS tools.",
+    "principles": [
+      "Fusion over Imitation: Mix Swiss precision with Organic warmth.",
+      "Emotion First: Finance is stressful; the UI must be calming.",
+      "Content is King: Data legibility is paramount.",
+      "Negative Space: Use whitespace to reduce cognitive load."
+    ]
+  },
+  "theme_strategy": {
+    "primary_theme": "light",
+    "rationale": "Personal finance requires clarity and trust. A 'Warm Bone' light theme evokes a physical ledger or high-end stationery, reducing the 'cold' feeling of spreadsheets.",
+    "dark_mode_support": true
+  },
+  "typography": {
+    "headings": {
+      "family": "Manrope, sans-serif",
+      "weights": ["600", "700", "800"],
+      "usage": "Page titles, Card headers, Section titles",
+      "letter_spacing": "-0.02em"
+    },
+    "body": {
+      "family": "DM Sans, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "General text, Labels, Form inputs"
+    },
+    "data": {
+      "family": "JetBrains Mono, monospace",
+      "weights": ["400", "500"],
+      "usage": "Currency values, Dates, Transaction IDs, Table data",
+      "feature_settings": "'tnum' on (Tabular Figures)"
+    }
+  },
+  "colors": {
+    "palette_name": "Organic Ledger",
+    "css_variables": {
+      "light": {
+        "--background": "40 20% 99%", 
+        "--foreground": "145 0% 10%",
+        "--card": "0 0% 100%",
+        "--card-foreground": "145 0% 10%",
+        "--popover": "0 0% 100%",
+        "--popover-foreground": "145 0% 10%",
+        "--primary": "146 35% 28%", 
+        "--primary-foreground": "60 30% 96%",
+        "--secondary": "40 20% 94%",
+        "--secondary-foreground": "145 0% 10%",
+        "--muted": "40 20% 94%",
+        "--muted-foreground": "25 5% 45%",
+        "--accent": "35 90% 50%",
+        "--accent-foreground": "0 0% 100%",
+        "--destructive": "0 84.2% 60.2%",
+        "--destructive-foreground": "0 0% 98%",
+        "--border": "40 10% 90%",
+        "--input": "40 10% 90%",
+        "--ring": "146 35% 28%",
+        "--radius": "0.5rem",
+        "--chart-1": "146 35% 28%",
+        "--chart-2": "35 90% 50%",
+        "--chart-3": "200 50% 45%",
+        "--chart-4": "25 5% 45%",
+        "--chart-5": "180 25% 25%"
+      },
+      "dark": {
+        "--background": "145 10% 5%",
+        "--foreground": "60 10% 96%",
+        "--card": "145 10% 8%",
+        "--card-foreground": "60 10% 96%",
+        "--popover": "145 10% 8%",
+        "--popover-foreground": "60 10% 96%",
+        "--primary": "146 40% 45%",
+        "--primary-foreground": "145 10% 5%",
+        "--secondary": "145 10% 12%",
+        "--secondary-foreground": "60 10% 96%",
+        "--muted": "145 10% 12%",
+        "--muted-foreground": "145 5% 60%",
+        "--accent": "35 90% 55%",
+        "--accent-foreground": "145 10% 5%",
+        "--destructive": "0 62.8% 30.6%",
+        "--destructive-foreground": "0 0% 98%",
+        "--border": "145 10% 15%",
+        "--input": "145 10% 15%",
+        "--ring": "146 40% 45%",
+        "--chart-1": "146 40% 55%",
+        "--chart-2": "35 90% 60%",
+        "--chart-3": "200 60% 55%",
+        "--chart-4": "25 10% 65%",
+        "--chart-5": "180 30% 35%"
+      }
+    }
+  },
+  "layout_strategies": {
+    "dashboard": {
+      "type": "Bento Grid",
+      "grid_cols": "grid-cols-1 md:grid-cols-4 lg:grid-cols-4",
+      "gap": "gap-6",
+      "padding": "p-6 md:p-8",
+      "rules": [
+        "Summary Cards (Income, Expense, Balance) should span 1 column each.",
+        "Main Chart (Monthly Overview) should span 2 columns and 2 rows.",
+        "Recent Transactions list should span 1 column and 2 rows (vertical list).",
+        "Budget Progress should span 1 column."
+      ]
+    },
+    "transactions": {
+      "type": "Clean Table",
+      "style": "Horizontal Lines Only",
+      "header": "Sticky, uppercase labels, tracking-wider, text-xs, text-muted-foreground",
+      "rows": "Hover effect (bg-muted/50), comfortable padding (py-4)",
+      "columns": ["Date", "Category", "Description", "Amount (Right Aligned)", "Actions"]
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Pill-shaped or slightly rounded (rounded-md)",
+      "interaction": "Scale down slightly on click (active:scale-95)",
+      "shadow": "shadow-sm hover:shadow-md transition-all"
+    },
+    "cards": {
+      "style": "Flat with subtle border (border-border) OR soft shadow (shadow-sm). No heavy drop shadows.",
+      "padding": "p-6"
+    },
+    "inputs": {
+      "style": "Minimal border, focus ring matches primary color.",
+      "height": "h-10"
+    },
+    "charts": {
+      "library": "Recharts (via Shadcn Charts)",
+      "style": "Minimal axes, custom tooltips, rounded bars."
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Add a subtle noise texture to the background if possible (opacity 0.03).",
+    "glassmorphism": "Use backdrop-blur-md for sticky headers and modals.",
+    "gradients": "Avoid full gradients. Use subtle mesh gradients in 'Summary Cards' backgrounds only."
+  },
+  "images": {
+    "login_hero": {
+      "url": "https://images.pexels.com/photos/6177604/pexels-photo-6177604.jpeg",
+      "alt": "Minimalist workspace with coffee and notebook",
+      "usage": "Split screen layout on Login/Signup page. Image on left (desktop) or top (mobile)."
+    }
+  },
+  "universal_guidelines": [
+    "DO NOT use generic 'Inter' for headings. Use 'Manrope'.",
+    "DO NOT use 'teal' or 'purple' as primary colors. Use 'Forest Green' (#2F5E41).",
+    "Ensure all interactive elements have `data-testid`.",
+    "Use `sonner` for toasts.",
+    "Use `lucide-react` for icons.",
+    "Mobile-first responsive design is mandatory.",
+    "Spacing should be generous (p-6, p-8) to avoid clutter."
+  ],
+  "instructions_to_main_agent": "1. Install necessary fonts (Manrope, DM Sans, JetBrains Mono). 2. Update `index.css` with the provided CSS variables. 3. Configure `tailwind.config.js` to use these font families. 4. Build the layouts using the defined Grid and Table strategies. 5. Use the provided image for the auth pages."
+}

@@ -1,0 +1,139 @@
+{
+  "summary": {
+    "total_tests": 26,
+    "passed_tests": 26,
+    "success_rate": "100.0%"
+  },
+  "detailed_results": [
+    {
+      "test": "User Signup",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Current User",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Categories",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Predefined Categories Check",
+      "success": true,
+      "details": "Expense: 47, Income: 10"
+    },
+    {
+      "test": "Create Custom Category",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Create Transaction",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Transactions",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Update Transaction",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Delete Transaction",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Create Recurring Transaction",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Recurring Transactions",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Update Recurring Transaction",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Toggle Recurring Transaction",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Generate Recurring Transactions",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Delete Recurring Transaction",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Create/Update Budget",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Budgets",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Monthly Analytics",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Yearly Analytics",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Category Breakdown",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Trend Analysis",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Fiscal Year Analytics",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Burn Rate & Runway",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Export CSV (All Transactions)",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Settings",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Update Settings",
+      "success": true,
+      "details": "Status: 200"
+    }
+  ]
+}
